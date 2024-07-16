@@ -1,0 +1,19 @@
+spring:
+  cache:
+    type: redis
+  sql:
+    init.mode: ALWAYS
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      javax:
+        persistence:
+          sharedCache:
+            mode: ENABLE_SELECTIVE
+      hibernate:
+        format_sql: true
+        generate_statistics: false
+    generate-ddl: true
